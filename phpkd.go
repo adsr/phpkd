@@ -11,5 +11,6 @@ func gofunc(x C.int) {
 
 func main() {
     fmt.Printf("in go main func\n")
-    C.cfunc(42)
+    C.phpkd_init()
+    C.phpkd_request()
 }
