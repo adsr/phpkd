@@ -2,6 +2,6 @@
 #define PHPKD_H
 
 int phpkd_init();
-int phpkd_request();
+int phpkd_request(int worker_id);
 
 #endif
