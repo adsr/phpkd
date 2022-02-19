@@ -80,10 +80,6 @@ func (self *server) run() {
 	// Init PHP SAPI
 	C.phpkd_init(C.CString(self.phpHandler)) // Freed in phpkd_deinit
 
-	// TODO phpkd_shutdown
-
-	fmt.Printf("here1\n")
-
 	// Init worker queue
 	self.workerQueue = make(chan *worker, self.numWorkers)
 
