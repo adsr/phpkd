@@ -14,7 +14,10 @@ phpkd.o: phpkd.c
 	$(shell php-config --includes) \
 	-g -O0 -c $< -o $@
 
+fmt:
+	goimports -w phpkd.go && gofmt -w phpkd.go
+
 clean:
 	rm -f phpkd.o libphpkd.a phpkd
 
-.PHONY: all clean
+.PHONY: all fmt clean
